@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org/%22%3E">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr th:each="shirt : ${shirtList}">
+        <td>
+            <h8 th:text="${shirt.name}"></h8>
+            <img th:src="@{/img/__${shirt.imageFileName}__}" th:alt="${shirt.name}">
+            <p th:text="${shirt.price}"></p>
+            <b th:text="${shirt.stock}"</b>
+
+            <hr/>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
